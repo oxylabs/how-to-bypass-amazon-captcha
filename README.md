@@ -27,7 +27,7 @@ with open('with_captcha.html', 'w') as file:
     file.write(response.text)
 ```
 
-## Using Amazon Product Data API
+## Using Amazon Scraper API
 
 The API is designed to avoid CAPTCHAs.
 
