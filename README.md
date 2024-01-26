@@ -1,1 +1,63 @@
-# how-to-bypass-amazon-captcha
+# How to Bypass Amazon Captcha When Scraping
+
+[![Oxylabs promo code](https://user-images.githubusercontent.com/129506779/250792357-8289e25e-9c36-4dc0-a5e2-2706db797bb5.png)](https://oxylabs.go2cloud.org/aff_c?offer_id=7&aff_id=877&url_id=112)
+
+Take a look at the process of bypassing CAPTCHAs when collecting public data from Amazon with [Amazon Scraper API](https://oxylabs.io/products/scraper-api/ecommerce/amazon) (**one-week free trial**)). You can find the full guide on our [blog](https://oxylabs.io/blog/bypass-amazon-captcha).
+
+## Setting up a simple scraper
+
+This scraper will likely encounter a CAPTCHA at some point.
+
+```python
+import requests
+
+custom_headers = {
+    "Accept-language": "en-GB,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Cache-Control": "max-age=0",
+    "Connection": "keep-alive",
+    "User-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Safari/605.1.15",
+}
+
+url = "https://www.amazon.com/SAMSUNG-Border-Less-Compatible-Adjustable-LS24AG302NNXZA/dp/B096N2MV3H?ref_=Oct_DLandingS_D_fe3953dd_2"
+
+response = requests.get(url, headers=custom_headers)
+
+with open('with_captcha.html', 'w') as file:
+    file.write(response.text)
+```
+
+## Using Amazon Product Data API
+
+The API is designed to avoid CAPTCHAs.
+
+```python
+import requests
+from pprint import pprint
+
+
+payload = {
+    'source': 'amazon',
+    'url': 'https://www.amazon.com/dp/B096N2MV3H',
+    'parse': True
+}
+
+response = requests.request(
+    'POST',
+    'https://realtime.oxylabs.io/v1/queries',
+    auth=('username', 'password'),
+    json=payload,
+)
+
+
+pprint(response.json())
+
+with open('without_captcha.json', 'w') as file:
+    file.write(response.text)
+```
+
+## Final word
+
+Follow our technical [documentation](https://developers.oxylabs.io/scraper-apis/e-commerce-scraper-api/amazon) for all available API parameters.
+
+In case of any issues, please contact us at hello@oxylabs.io
