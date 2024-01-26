@@ -6,7 +6,7 @@ Take a look at the process of bypassing CAPTCHAs when collecting public data fro
 
 ## Setting up a simple scraper
 
-This scraper will likely encounter a CAPTCHA at some point.
+This scraper will likely encounter a CAPTCHA.
 
 ```python
 import requests
