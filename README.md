@@ -61,3 +61,5 @@ with open('without_captcha.json', 'w') as file:
 Follow our technical [documentation](https://developers.oxylabs.io/scraper-apis/e-commerce-scraper-api/amazon) for all available API parameters.
 
 In case of any issues, please contact us at support@oxylabs.io
+
+Looking to scrape more other Amazon data? [Amazon Review Scraper](https://github.com/oxylabs/amazon-review-scraper), [Amazon ASIN Scraper](https://github.com/oxylabs/amazon-asin-scraper), [How to Scrape Amazon Prices](https://github.com/oxylabs/how-to-scrape-amazon-prices), [Scraping Amazon Product Data](https://github.com/oxylabs/how-to-scrape-amazon-product-data)
