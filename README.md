@@ -2,6 +2,8 @@
 
 [![Oxylabs promo code](https://raw.githubusercontent.com/oxylabs/amazon-scraper/refs/heads/main/Amazon-Scraper-API-1090x275.png)](https://oxylabs.go2cloud.org/aff_c?offer_id=7&aff_id=877&url_id=112)
 
+[![](https://dcbadge.vercel.app/api/server/eWsVUJrnG5)](https://discord.gg/Pds3gBmKMH)
+
 Take a look at the process of bypassing CAPTCHAs when collecting public data from Amazon with [Amazon Scraper API](https://oxylabs.io/products/scraper-api/ecommerce/amazon) (**one-week free trial**). You can find the full guide on our [blog](https://oxylabs.io/blog/bypass-amazon-captcha).
 
 ## Setting up a simple scraper
